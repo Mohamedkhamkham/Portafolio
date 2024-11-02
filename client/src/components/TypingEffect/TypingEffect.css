@@ -1,0 +1,23 @@
+.typing-effect {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.typing-effect h1 {
+  font-family: 'Arial', sans-serif;
+  font-size: 3.5em;
+  color: #333;
+}
+
+.cursor {
+  animation: blink-animation 1s step-end infinite;
+}
+
+@keyframes blink-animation {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}

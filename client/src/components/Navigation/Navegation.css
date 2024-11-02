@@ -1,0 +1,23 @@
+.navbar-fixed {
+  background: rgba(0, 0, 0, 0.4); 
+  backdrop-filter: blur(4px);
+  border-bottom: 2px solid #e50914; 
+}
+.navbar-brand img {
+  width: 40px;
+  height: auto;
+}
+
+.nav-link-item {
+  cursor: pointer; 
+  color: white; 
+  text-decoration: none;
+}
+
+.nav-link-item:hover {
+  color: #ddd; 
+}
+
+.nav-link-item:active {
+  color: #bbb; 
+}

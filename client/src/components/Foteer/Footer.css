@@ -1,0 +1,17 @@
+.footer {
+  width: 100%;
+  background-color: #141414;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  border-top: 0px solid #e50914;
+}
+
+.footerText {
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  line-height: normal;
+}

@@ -1,38 +1,38 @@
-import './components/App.css';
-import Navigation from './components/Navigation/Navegation';
-import React, { useState } from 'react';
-import Home from './pages/Home';
-import Projects from './pages/Projects';
-import Skills from './pages/Skills';
-import Contact from './pages/contact';
-import CV from './pages/Cv';
+import './components/App.css'
+import './components/Navigation/Navegation.css'
+import './pages/Home/Home.css'
+import Navigation from './components/Navigation/Navegation'
+import Footer from './components/Foteer/Footer'
+import React from 'react'
+import { Element } from 'react-scroll'
+
+import Home from './pages/Home/Home'
+import Projects from './pages/Proyectos/Projects'
+import Skills from './pages/Skills/Skills'
+import Contact from './pages/contacto/contact'
+
 
 function App() {
-  const [activeSection, setActiveSection] = useState('home');
-
-  const renderSection = () => {
-    switch (activeSection) {
-      case 'projects':
-        return <Projects />;
-      case 'skills':
-        return <Skills />;
-      case 'contact':
-        return <Contact />;
-      case 'cv':
-        return <CV />;
-      default:
-        return <Home />;
-    }
-  };
-
   return (
     <div className="App">
-      <Navigation setActiveSection={setActiveSection} />
+      <Navigation />
       <div className="section-container">
-        {renderSection()}
+        <Element name="inicio" className="section">
+          <Home />
+        </Element>
+        <Element name="skills" className="section">
+          <Skills />
+        </Element>
+        <Element name="proyectos" className="section">
+          <Projects />
+        </Element>
+        <Element name="contactos" className="section">
+          <Contact />
+        </Element>
       </div>
+      <Footer />
     </div>
   );
 }
 
-export default App;
+export default App

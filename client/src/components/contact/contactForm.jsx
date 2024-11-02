@@ -16,7 +16,6 @@ const ContactForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Aquí podrías manejar el envío del formulario, como enviar un correo o almacenar en una base de datos
         console.log(formData);
         alert('Mensaje enviado, gracias por contactarme!');
     };

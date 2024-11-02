@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Navbar, Nav, Container } from 'react-bootstrap'
 import { Link as ScrollLink } from 'react-scroll'
 import './Navegation.css'
-import logo from '../../assets/logo.png'
+import logo from '../../assets/88ipIkbEsTaBf.png!sw800.png'
 import cvPDF from '../../assets/cv.pdf'
 
 function Navigation() {

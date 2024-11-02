@@ -1,0 +1,43 @@
+.contact-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #141414; /* Fondo oscuro similar a Netflix */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    color: #fff; /* Texto blanco */
+    text-align: center; /* Centrar texto */
+}
+
+.contact-form h1 {
+    color: #e50914; /* Color del título */
+    margin-bottom: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0; /* Espaciado vertical */
+    border: none;
+    border-radius: 5px;
+    background-color: #333; /* Fondo de los campos */
+    color: #fff; /* Texto blanco */
+}
+
+.contact-form textarea {
+    height: 100px; /* Altura del área de texto */
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #e50914; /* Color del botón */
+    color: #fff; /* Texto blanco */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #b40712; /* Color al pasar el ratón */
+}

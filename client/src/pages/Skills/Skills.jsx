@@ -1,12 +1,12 @@
 import React from 'react';
-import Carousel from '../../components/Carousel/Carousel'
 import nodejs from '../../assets/nodejs.png'
-import MongoDB from '../../assets/MongoDB.png'
+import MongoDB from '../../assets/mongo.png'
 import html from '../../assets/html.png'
 import css from '../../assets/css.png'
 import javascript from '../../assets/javascript.png'
 import react from '../../assets/react.png'
 import bootstrap from '../../assets/bootstrap.png'
+import MyCarousel from '../../components/Carousel/MyCarousel';
 
 const images = [
     { src: nodejs, alt: 'nodejs' },
@@ -22,7 +22,7 @@ function Skills() {
     return (
         <div className="skills-section">
             <h1>Skills</h1>
-            <Carousel images={images} />
+            <MyCarousel images={images} />
         </div>
     );
 }

@@ -16,8 +16,8 @@ function App() {
   return (
     <div className="App">
       <Navigation />
-      <div className="section-container">
-        <Element name="inicio" className="section">
+      <div className="">
+        <Element name="inicio" className="">
           <Home />
         </Element>
         <Element name="skills" className="section">

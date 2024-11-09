@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import '../../components/contact/contact.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -17,7 +19,12 @@ const ContactForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(formData);
-        alert('Mensaje enviado, gracias por contactarme!');
+        toast.success('Mensaje enviado, gracias por contactarme!', {
+            position: 'bottom-right',
+            autoClose: 5000
+
+        })
+
     };
 
     return (
@@ -57,6 +64,7 @@ const ContactForm = () => {
                 ></textarea>
                 <button type="submit">Enviar</button>
             </form>
+            <ToastContainer />
         </div>
     );
 }

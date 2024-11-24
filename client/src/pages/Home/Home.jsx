@@ -26,8 +26,6 @@ const Home = () => {
                             </Button>
                             {showMore && (
                                 <div className={`additional-info ${showMore ? 'visible' : ''}`}>
-                                    <p>Información adicional que deseas mostrar al hacer clic en el botón "Más Información".</p>
-                                    <p>Otra información relevante sobre ti o tu trabajo.</p>
                                 </div>
                             )}
                         </div>

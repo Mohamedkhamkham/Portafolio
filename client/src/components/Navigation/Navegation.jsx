@@ -3,7 +3,7 @@ import { Navbar, Nav, Container } from 'react-bootstrap'
 import { Link as ScrollLink } from 'react-scroll'
 import './Navegation.css'
 import logo from '../../assets/88ipIkbEsTaBf.png!sw800.png'
-import cvPDF from '../../assets/cv.pdf'
+import cvPDF from '../../assets/Moha.pdf'
 
 function Navigation() {
     const [activeItem, setActiveItem] = useState(null);

@@ -1,20 +1,19 @@
 import React from "react";
-import { Carousel } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "./MyCarousel.css";
 
 function MyCarousel({ images }) {
     return (
-        <Carousel>
+        <div className="carousel-circle">
             {images.map((image, index) => (
-                <Carousel.Item key={index}>
-                    <img
-                        className="d-block w-100"
-                        src={image.src}
-                        alt={image.alt}
-                    />
-                </Carousel.Item>
+                <div
+                    key={index}
+                    className="carousel-item-circle"
+                    style={{ transform: `rotate(${index * (360 / images.length)}deg)` }}
+                >
+                    <img src={image.src} alt={image.alt} />
+                </div>
             ))}
-        </Carousel>
+        </div>
     );
 }
 

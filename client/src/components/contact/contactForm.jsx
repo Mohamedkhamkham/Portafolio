@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import '../../components/contact/contact.css';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import React, { useState } from "react";
+import "../../components/contact/contact.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
-        name: '',
-        surname: '',
-        email: '',
-        message: ''
+        name: "",
+        surname: "",
+        email: "",
+        message: "",
     });
 
     const handleChange = (e) => {
@@ -18,13 +18,41 @@ const ContactForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(formData);
-        toast.success('Mensaje enviado, gracias por contactarme!', {
-            position: 'bottom-right',
-            autoClose: 5000
 
+        const formUrl =
+            "https://docs.google.com/forms/u/0/d/e/1FAIpQLScCJo5ic6HKYUS7JD8XbP_5Y6qmrWZAyay_CTbVd_x21_828Q/formResponse";
+
+        const formParams = new URLSearchParams();
+        formParams.append("entry.947510924", formData.surname);
+        formParams.append("entry.1534703645", formData.email);
+        formParams.append("entry.1467633550", formData.message);
+
+
+        fetch(formUrl, {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: formParams,
         })
+            .then(() => {
 
+                toast.success("Mensaje enviado, gracias por contactarme!", {
+                    position: "bottom-right",
+                    autoClose: 5000,
+                });
+
+                setFormData({
+                    name: "",
+                    surname: "",
+                    email: "",
+                    message: "",
+                });
+            })
+            .catch((err) =>
+                console.error("Error al enviar el formulario:", err)
+            );
     };
 
     return (
@@ -50,7 +78,7 @@ const ContactForm = () => {
                 <input
                     type="email"
                     name="email"
-                    placeholder="Correo Electrónico"
+                    placeholder="Correo electrónico"
                     value={formData.email}
                     onChange={handleChange}
                     required
@@ -67,6 +95,6 @@ const ContactForm = () => {
             <ToastContainer />
         </div>
     );
-}
+};
 
 export default ContactForm;
